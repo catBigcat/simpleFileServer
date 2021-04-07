@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>简单markdown展示器</title>
+	<script type="text/javascript" src="./public/dist/showdown.min.js"></script>
+</head>
+
+<body>
+
+<div style="display:none"id="ctt">
+# abc
+# abc
+# abc
+</div>
+
+<div  id="show">
+</div>
+</body>
+
+<script type="text/javascript">
+	 var text = document.getElementById("ctt").innerHTML;
+      var converter = new showdown.Converter();
+      var html = converter.makeHtml(text);
+      document.getElementById("show").innerHTML = html;
+
+
+</script>
+
+
+</html>
